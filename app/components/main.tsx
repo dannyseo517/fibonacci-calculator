@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { fibonacci } from 'Helpers/fibonacci';
+import FibonacciInput from 'Components/fibonacci-input';
 
 class Main extends Component {
     render () {
-        const fuck = fibonacci(5);
+        // const fib = fibonacci(5);
         return (
             <div>
                 Danny Seo's Fibonacci Tool Thingy
-                {fuck}
+                {/* {fib} */}
+                <FibonacciInput />
             </div>
         )
     }

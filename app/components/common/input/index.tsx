@@ -9,12 +9,19 @@ class Input extends PureComponent<IProps, IState> {
         this.state = {
             value: '',
         }
+
+        this.handleInputOnChange = this.handleInputOnChange.bind(this);
     }
+    
+    handleInputOnChange (event: React.FormEvent<HTMLInputElement>) {
+        const { value } = event.currentTarget;
+        this.setState({ value });
+        this.props.callback(value);
+    }
+
     render () {
         return (
-            <div>
-                <input />
-            </div>
+            <input value={this.state.value} onChange={this.handleInputOnChange}/>
         )
     }
 }
