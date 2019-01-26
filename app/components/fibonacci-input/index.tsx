@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import Input from 'Common/input';
 import Button from 'Common/button';
+import { requestFibonacci } from 'Actions/index';
+import { connect } from 'react-redux';
 
-class FibonacciInput extends Component {
+interface IProps { dispatch: any; }
+interface IState { inputVal: string; }
+
+class FibonacciInput extends Component<IProps, IState> {
     constructor (props: any) {
         super(props);
 
@@ -18,6 +23,10 @@ class FibonacciInput extends Component {
     }
     handleButtonClick () {
         // dispatch redux to calculate fibonacci numbers in the results component
+        const valueNum = Number(this.state.inputVal);
+        if (Number.isInteger(valueNum)) {
+            this.props.dispatch(requestFibonacci(valueNum));
+        }
     }
     render () {
         return (
@@ -29,4 +38,4 @@ class FibonacciInput extends Component {
     }
 }
 
-export default FibonacciInput;
+export default connect()(FibonacciInput);

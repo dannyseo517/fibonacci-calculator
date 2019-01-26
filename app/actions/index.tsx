@@ -1,12 +1,12 @@
-import { REDUX_TEST } from 'Constants/action-types';
+import { REQUEST_FIBONACCI } from 'Constants/action-types';
 
-export const testRedux = (message: string) => {
+export const requestFibonacci = (value: number) => {
     return (dispatch: any) => {
         dispatch({
-            type: REDUX_TEST,
+            type: REQUEST_FIBONACCI,
             data: {
-                text: message,
-            }
+                value,
+            },
         })
     }
 }

@@ -1,9 +1,9 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-import testReducer from 'Reducers/test';
+import fibonacciReducer from 'Reducers/fibonacci';
 import thunk from 'redux-thunk';
 
 const reducers = combineReducers({
-    testReducer,
+    fibonacciReducer,
 });
 
 

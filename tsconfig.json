@@ -20,6 +20,10 @@
             "Styles/*": ["app/styles/*"],
             "Reducers/*": ["app/reducers/*"]
         },
+        "lib": [
+            "es2015",
+            "dom",
+        ]
     },
     "include": [
         "./app/"

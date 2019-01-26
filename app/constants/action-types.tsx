@@ -1,5 +1,5 @@
-const REDUX_TEST: string = 'REDUX_TEXT';
+const REQUEST_FIBONACCI: string = 'REQUEST_FIBONACCI';
 
 export {
-    REDUX_TEST,
+    REQUEST_FIBONACCI,
 }
