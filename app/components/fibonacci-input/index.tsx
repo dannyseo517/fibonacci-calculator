@@ -22,8 +22,8 @@ class FibonacciInput extends Component {
     render () {
         return (
             <div>
-                <Input callback={this.handleInputChange} />
-                <Button callback={this.handleButtonClick} />
+                <Input callback={this.handleInputChange} placeholder={'Enter any whole number (0, 1, 2 ...)'} />
+                <Button callback={this.handleButtonClick} buttonText={'Calculate'} />
             </div>
         )
     }

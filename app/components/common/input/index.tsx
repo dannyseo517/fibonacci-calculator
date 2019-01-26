@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 
-interface IProps { callback (val: any): void }
+interface IProps { placeholder: string; callback (val: any): void }
 interface IState { value: string }
 
 class Input extends PureComponent<IProps, IState> {
@@ -21,7 +21,7 @@ class Input extends PureComponent<IProps, IState> {
 
     render () {
         return (
-            <input value={this.state.value} onChange={this.handleInputOnChange}/>
+            <input value={this.state.value} onChange={this.handleInputOnChange} placeholder={this.props.placeholder} />
         )
     }
 }

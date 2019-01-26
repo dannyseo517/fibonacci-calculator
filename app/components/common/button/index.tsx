@@ -1,6 +1,6 @@
 import React, { PureComponent, useCallback } from 'react';
 
-interface IProps { callback (): void }
+interface IProps { buttonText: string; callback (): void; }
 interface IState { value: string }
 
 class Button extends PureComponent<IProps, IState> {
@@ -19,7 +19,7 @@ class Button extends PureComponent<IProps, IState> {
     
     render () {
         return (
-            <button onClick={this.handleButtonClick}>CALCULATE</button>
+            <button onClick={this.handleButtonClick}>{this.props.buttonText}</button>
         )
     }
 }
