@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        "module": "es6",
+        "target": "es5",
+        "jsx": "react",
+        "allowJs": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "removeComments": true,
+        "baseUrl": ".",
+        "sourceMap": true,
+        "paths": {
+            "Actions/*": ["app/actions/*"],
+            "Common/*": ["app/components/common/*"],
+            "Components/*": ["app/components/*"],
+            "Constants/*": ["app/constants/*"],
+            "Helpers/*": ["app/helpers/*"],
+            "Styles/*": ["app/styles/*"],
+            "Reducers/*": ["app/reducers/*"]
+        },
+    },
+    "include": [
+        "./app/"
+    ],
+    "exclude": [
+        "./node_modules/"
+    ]
+}
