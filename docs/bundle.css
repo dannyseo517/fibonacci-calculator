@@ -1,0 +1,88 @@
+@font-face {
+  font-family: 'Coolvetica';
+  src: url(fonts/coolvetica.ttf) format("truetype"); }
+
+.input-container {
+  position: relative;
+  margin: 0 auto;
+  width: 700px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15); }
+  .input-container input {
+    width: 100%;
+    height: 40px;
+    padding: 6px;
+    border: solid 3px #ff9233;
+    font-size: 21px;
+    outline: none; }
+    .input-container input::placeholder {
+      font-style: italic;
+      font-size: 16px; }
+    .input-container input:active {
+      border: solid 3px #82d6d6; }
+    .input-container input:focus {
+      border: solid 3px #82d6d6; }
+  .input-container button {
+    position: absolute;
+    right: 8px;
+    top: 5px;
+    background-color: #ff6140;
+    border: none;
+    color: #FAFAFA;
+    width: 30px;
+    height: 30px;
+    border-radius: 10%;
+    font-size: 21px;
+    outline: none;
+    cursor: pointer; }
+    .input-container button:hover {
+      background-color: #e8342f; }
+    .input-container button:active {
+      background-color: #82d6d6; }
+
+.results-container {
+  width: 688px;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 2px solid #ff9233;
+  background-color: white;
+  padding: 5px;
+  margin-top: 20px;
+  min-height: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15); }
+  .results-container .results-heading-text {
+    font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
+    margin-bottom: 5px; }
+
+body {
+  margin: 0;
+  width: 100%;
+  font-family: 'Helvetica';
+  background-color: #FAFAFA;
+  color: #393e46;
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out; }
+
+body.loaded {
+  opacity: 1; }
+
+.main-container {
+  margin-top: 200px; }
+  .main-container .heading-img {
+    display: block;
+    width: 300px;
+    margin: 0 auto; }
+  .main-container .heading-text {
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Coolvetica', Arial, Helvetica, sans-serif; }
+    .main-container .heading-text span:first-child {
+      color: #ff9233; }
+    .main-container .heading-text span:last-child {
+      color: #ff6140; }
+  .main-container .heading-subtext {
+    text-align: center;
+    font-family: 'Coolvetica', Arial, Helvetica, sans-serif; }
+
