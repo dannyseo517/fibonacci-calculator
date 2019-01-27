@@ -24,9 +24,10 @@ class Results extends Component<IProps> {
     render () {
         const { fibonacciArr } = this.props;
         const renderFibonacciArr = this.renderFibonacciArr(fibonacciArr);
+        const sum = fibonacciArr ? fibonacciArr.reduce((a,b) => a + b, 0) : 0;
         return (
             <div className='results-container'>
-                <div className='results-heading-text'>Results</div>
+                <div className='results-heading-text'>Result (sum: {sum})</div>
                 {renderFibonacciArr}
             </div>
         )

@@ -2,7 +2,7 @@
     width: 688px;
     margin: 0 auto;
     border-radius: 5px;
-    border: 2px solid $blue-100;
+    border: 2px solid $red-100;
     background-color: white;
     padding: 5px;
     margin-top: 20px;
@@ -11,5 +11,6 @@
     
     .results-heading-text {
         font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
+        margin-bottom: 5px;
     }
 }
