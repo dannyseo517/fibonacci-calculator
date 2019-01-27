@@ -1,66 +1,103 @@
-.input-container {
-    position: relative;
-    margin: 0 auto;
-    width: 700px;
-    margin-top: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
-    input {
-        width: 100%;
-        height: 40px;
-        padding: 6px;
-        border: solid 2px $red-100;
-        font-size: 21px;
-        outline: none;
-        &::placeholder {
-            font-style: italic;
-            font-size: 16px;
-        }
-        &:active {
-            border: solid 2px $blue-200;
-        }
-        &:focus {
-            border: solid 2px $blue-200;
-        }
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
     }
-    button {
-        position: absolute;
-        right: 8px;
-        top: 5px;
-        background-color: $red-300;
-        border: none;
-        color: $primary-white;
-        width: 30px;
-        height: 30px;
-        border-radius: 10%;
-        font-size: 21px;
-        outline: none;
-        cursor: pointer;
-        &:hover {
-            background-color: $red-400;
-        }
-        &:active {
-            background-color: $blue-200;
-        }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
     }
 }
 
-.mode-container {
-    width: 700px;
+.fib-input-container {
     margin: 0 auto;
-    margin-top: 10px;
+    width: 700px;
 
-    span {
+    .input-container {
+        position: relative;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 4px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+        input {
+            width: 100%;
+            height: 40px;
+            padding: 6px;
+            border: solid 2px $red-100;
+            font-size: 21px;
+            outline: none;
+            &::placeholder {
+                font-style: italic;
+                font-size: 16px;
+            }
+            &:active {
+                border: solid 2px $blue-200;
+            }
+            &:focus {
+                border: solid 2px $blue-200;
+            }
+        }
+        button {
+            position: absolute;
+            right: 8px;
+            top: 5px;
+            background-color: $red-300;
+            border: none;
+            color: $primary-white;
+            width: 30px;
+            height: 30px;
+            border-radius: 10%;
+            font-size: 21px;
+            outline: none;
+            cursor: pointer;
+            &:hover {
+                background-color: $red-400;
+            }
+            &:active {
+                background-color: $blue-200;
+            }
+        }
+        &.error {
+            animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+            transform: translate3d(0, 0, 0);
+            backface-visibility: hidden;
+            perspective: 1000px;
+        }
+    }
+
+    .mode-container {
+        width: 100%;
+        margin-top: 10px;
+
+        span {
+            font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
+            margin-right: 20px;
+            cursor: pointer;
+            &:first-child {
+                margin-left: 8px;
+            }
+            &.active {
+                color: $red-100;
+            }
+            &:hover {
+                color: $red-100;
+            }
+        }
+    }
+
+    .error-msg {
+        position: absolute;
         font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
-        margin-right: 20px;
-        cursor: pointer;
-        &:first-child {
-            margin-left: 8px;
-        }
-        &.active {
-            color: $red-100;
-        }
-        &:hover {
-            color: $red-100;
-        }
+        width: 100%;
+        color: $red-400;
+        font-style: italic;
+        font-size: 14px;
     }
 }

@@ -2,4 +2,4 @@ const REQUEST_FIBONACCI: string = 'REQUEST_FIBONACCI';
 
 export {
     REQUEST_FIBONACCI,
-}
+};

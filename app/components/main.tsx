@@ -16,7 +16,7 @@ class Main extends Component {
                 <FibonacciInput />
                 <FibonacciResult />
             </div>
-        )
+        );
     }
 }
 

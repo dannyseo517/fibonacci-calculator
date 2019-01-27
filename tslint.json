@@ -20,7 +20,8 @@
         "object-curly-spacing": [true, "always"],
         "space-before-function-paren": [true, "always"],
         "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
-        "jsx-no-lambda": [false]
+        "jsx-no-lambda": [false],
+        "semicolon": [true, "always"]
     },
     "rulesDirectory": [],
     "formatters": ["stylish"]

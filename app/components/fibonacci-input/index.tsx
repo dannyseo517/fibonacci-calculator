@@ -5,7 +5,7 @@ import { requestFibonacci } from 'Actions/index';
 import { connect } from 'react-redux';
 
 interface IProps { dispatch: any; }
-interface IState { inputVal: string; mode: string; }
+interface IState { inputVal: string; mode: string; error: boolean; }
 
 class FibonacciInput extends Component<IProps, IState> {
     constructor (props: any) {
@@ -14,7 +14,8 @@ class FibonacciInput extends Component<IProps, IState> {
         this.state = {
             inputVal: '',
             mode: 'linear',
-        }
+            error: false,
+        };
 
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleButtonClick = this.handleButtonClick.bind(this);
@@ -30,8 +31,11 @@ class FibonacciInput extends Component<IProps, IState> {
         // dispatch redux to calculate fibonacci numbers in the results component
         const { inputVal, mode } = this.state;
         const valueNum = Number(inputVal);
-        if (Number.isInteger(valueNum) && valueNum >= 0 && valueNum <= 100) {
+        if (Number.isInteger(valueNum) && valueNum > 0 && valueNum <= 100) {
+            this.setState({ error: false });
             this.props.dispatch(requestFibonacci(valueNum, mode));
+        } else {
+            this.setState({ error: true });
         }
     }
 
@@ -40,18 +44,25 @@ class FibonacciInput extends Component<IProps, IState> {
     }
 
     render () {
+        const { error } = this.state;
+        const inputErrorCls = error ? 'error' : '';
         return (
-            <Fragment>
+            <div className='fib-input-container'>
                 <div className='mode-container'>
                     <span className={this.state.mode === 'linear' ? 'active' : ''} onClick={() => this.handleModeChange('linear')}>Linear</span>
                     <span className={this.state.mode === 'recursion' ? 'active' : ''} onClick={() => this.handleModeChange('recursion')}>Recursion</span>
                 </div>
-                <form className='input-container' onSubmit={this.handleButtonClick} >
+                <form className={`input-container ${inputErrorCls}`} onSubmit={this.handleButtonClick} >
                     <Input callback={this.handleInputChange} placeholder={'Enter any whole number (1, 2 ... up to 100)'} autofocus={true} />
                     <Button callback={this.handleButtonClick} buttonText={'='} />
                 </form>
-            </Fragment>
-        )
+                { this.state.error ?
+                    <div className='error-msg'>
+                        You must enter a whole number between 1 to 100
+                    </div>
+                : null }
+            </div>
+        );
     }
 }
 

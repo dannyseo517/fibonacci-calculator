@@ -8,6 +8,6 @@ export const requestFibonacci = (value: number, mode: string) => {
                 value,
                 mode,
             },
-        })
-    }
-}
+        });
+    };
+};
