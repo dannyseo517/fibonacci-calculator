@@ -40,6 +40,21 @@
     .input-container button:active {
       background-color: #82d6d6; }
 
+.mode-container {
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 10px; }
+  .mode-container span {
+    font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
+    margin-right: 20px;
+    cursor: pointer; }
+    .mode-container span:first-child {
+      margin-left: 8px; }
+    .mode-container span.active {
+      color: #ff9233; }
+    .mode-container span:hover {
+      color: #ff9233; }
+
 .results-container {
   width: 688px;
   margin: 0 auto;
@@ -53,6 +68,8 @@
   .results-container .results-heading-text {
     font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
     margin-bottom: 5px; }
+  .results-container .results-fibonacci {
+    font-size: 16px; }
 
 body {
   margin: 0;
