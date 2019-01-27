@@ -1,6 +1,6 @@
 import React, { PureComponent, useCallback } from 'react';
 
-interface IProps { buttonText: string; callback (): void; }
+interface IProps { buttonText: string; callback (event: any): void; }
 interface IState { value: string }
 
 class Button extends PureComponent<IProps, IState> {
@@ -13,8 +13,8 @@ class Button extends PureComponent<IProps, IState> {
         this.handleButtonClick = this.handleButtonClick.bind(this);
     }
     
-    handleButtonClick () {
-        this.props.callback();
+    handleButtonClick (event: any) {
+        this.props.callback(event);
     }
     
     render () {

@@ -11,7 +11,12 @@ class Results extends Component<IProps> {
 
     renderFibonacciArr (fibonacciArr: number[]) {
         if (fibonacciArr && fibonacciArr.length > 0) {
-            return fibonacciArr.map(item => `${item}, `);
+            return fibonacciArr.map((item, index) => {
+                if (fibonacciArr.length === index + 1) {
+                    return `${item}`;
+                }
+                return `${item}, `
+            });
         }
         return null;
     }
@@ -20,7 +25,7 @@ class Results extends Component<IProps> {
         const { fibonacciArr } = this.props;
         const renderFibonacciArr = this.renderFibonacciArr(fibonacciArr);
         return (
-            <div>
+            <div className='results-container'>
                 {renderFibonacciArr}
             </div>
         )

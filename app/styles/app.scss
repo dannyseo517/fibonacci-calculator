@@ -1,5 +1,43 @@
+@import './fonts.scss';
+@import './colors.scss';
 @import './common/input/index';
+@import './fibonacci-input/index';
 
 body {
-    background-color: yellow;
+    margin: 0;
+    width: 100%;
+    font-family: 'Helvetica';
+    background-color: $primary-white;
+    color: $primary-black;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+}
+ 
+body.loaded {
+    opacity: 1;
+}
+
+.main-container {
+    .heading-img {
+        display: block;
+        width: 300px;
+        margin: 0 auto;
+    }
+    .heading-text {
+        text-align: center;
+        font-size: 36px;
+        font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
+        span:first-child {
+            color: $red-100;
+        }
+        span:last-child {
+            color: $red-300;
+        }
+    }
+    .heading-subtext {
+        text-align: center;
+        font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
+    }
 }

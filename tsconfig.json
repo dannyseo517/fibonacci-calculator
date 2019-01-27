@@ -12,6 +12,7 @@
         "baseUrl": ".",
         "sourceMap": true,
         "paths": {
+            "Assets/*": ["public/assets/*"],
             "Actions/*": ["app/actions/*"],
             "Common/*": ["app/components/common/*"],
             "Components/*": ["app/components/*"],
