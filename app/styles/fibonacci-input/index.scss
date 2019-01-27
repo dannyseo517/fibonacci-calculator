@@ -43,3 +43,24 @@
         }
     }
 }
+
+.mode-container {
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 10px;
+
+    span {
+        font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
+        margin-right: 20px;
+        cursor: pointer;
+        &:first-child {
+            margin-left: 8px;
+        }
+        &.active {
+            color: $red-100;
+        }
+        &:hover {
+            color: $red-100;
+        }
+    }
+}

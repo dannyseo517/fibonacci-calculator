@@ -28,7 +28,9 @@ class Results extends Component<IProps> {
         return (
             <div className='results-container'>
                 <div className='results-heading-text'>Result (sum: {sum})</div>
-                {renderFibonacciArr}
+                <div className='results-fibonacci'>
+                    {renderFibonacciArr}
+                </div>
             </div>
         )
     }
