@@ -8,7 +8,7 @@
         width: 100%;
         height: 40px;
         padding: 6px;
-        border: solid 3px $red-100;
+        border: solid 2px $red-100;
         font-size: 21px;
         outline: none;
         &::placeholder {
@@ -16,10 +16,10 @@
             font-size: 16px;
         }
         &:active {
-            border: solid 3px $blue-200;
+            border: solid 2px $blue-200;
         }
         &:focus {
-            border: solid 3px $blue-200;
+            border: solid 2px $blue-200;
         }
     }
     button {
