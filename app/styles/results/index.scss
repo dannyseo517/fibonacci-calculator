@@ -1,0 +1,15 @@
+.results-container {
+    width: 688px;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 2px solid $blue-100;
+    background-color: white;
+    padding: 5px;
+    margin-top: 20px;
+    min-height: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+    
+    .results-heading-text {
+        font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
+    }
+}

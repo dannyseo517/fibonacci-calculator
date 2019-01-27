@@ -2,6 +2,7 @@
 @import './colors.scss';
 @import './common/input/index';
 @import './fibonacci-input/index';
+@import './results/index';
 
 body {
     margin: 0;
@@ -20,6 +21,7 @@ body.loaded {
 }
 
 .main-container {
+    margin-top: 200px;
     .heading-img {
         display: block;
         width: 300px;

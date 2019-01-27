@@ -26,6 +26,7 @@ class Results extends Component<IProps> {
         const renderFibonacciArr = this.renderFibonacciArr(fibonacciArr);
         return (
             <div className='results-container'>
+                <div className='results-heading-text'>Results</div>
                 {renderFibonacciArr}
             </div>
         )
