@@ -2,67 +2,90 @@
   font-family: 'Coolvetica';
   src: url(fonts/coolvetica.ttf) format("truetype"); }
 
-.input-container {
-  position: relative;
-  margin: 0 auto;
-  width: 700px;
-  margin-top: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15); }
-  .input-container input {
-    width: 100%;
-    height: 40px;
-    padding: 6px;
-    border: solid 2px #ff9233;
-    font-size: 21px;
-    outline: none; }
-    .input-container input::placeholder {
-      font-style: italic;
-      font-size: 16px; }
-    .input-container input:active {
-      border: solid 2px #82d6d6; }
-    .input-container input:focus {
-      border: solid 2px #82d6d6; }
-  .input-container button {
-    position: absolute;
-    right: 8px;
-    top: 5px;
-    background-color: #ff6140;
-    border: none;
-    color: #FAFAFA;
-    width: 30px;
-    height: 30px;
-    border-radius: 10%;
-    font-size: 21px;
-    outline: none;
-    cursor: pointer; }
-    .input-container button:hover {
-      background-color: #e8342f; }
-    .input-container button:active {
-      background-color: #82d6d6; }
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0); }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0); }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0); } }
 
-.mode-container {
-  width: 700px;
+.fib-input-container {
   margin: 0 auto;
-  margin-top: 10px; }
-  .mode-container span {
+  width: 700px; }
+  .fib-input-container .input-container {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15); }
+    .fib-input-container .input-container input {
+      width: 100%;
+      height: 40px;
+      padding: 6px;
+      border: solid 2px #ff9233;
+      font-size: 21px;
+      outline: none; }
+      .fib-input-container .input-container input::placeholder {
+        font-style: italic;
+        font-size: 16px; }
+      .fib-input-container .input-container input:active {
+        border: solid 2px #82d6d6; }
+      .fib-input-container .input-container input:focus {
+        border: solid 2px #82d6d6; }
+    .fib-input-container .input-container button {
+      position: absolute;
+      right: 8px;
+      top: 5px;
+      background-color: #ff6140;
+      border: none;
+      color: #FAFAFA;
+      width: 30px;
+      height: 30px;
+      border-radius: 10%;
+      font-size: 21px;
+      outline: none;
+      cursor: pointer; }
+      .fib-input-container .input-container button:hover {
+        background-color: #e8342f; }
+      .fib-input-container .input-container button:active {
+        background-color: #82d6d6; }
+    .fib-input-container .input-container.error {
+      animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+      perspective: 1000px; }
+  .fib-input-container .mode-container {
+    width: 100%;
+    margin-top: 10px; }
+    .fib-input-container .mode-container span {
+      font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
+      margin-right: 20px;
+      cursor: pointer; }
+      .fib-input-container .mode-container span:first-child {
+        margin-left: 8px; }
+      .fib-input-container .mode-container span.active {
+        color: #ff9233; }
+      .fib-input-container .mode-container span:hover {
+        color: #ff9233; }
+  .fib-input-container .error-msg {
+    position: absolute;
     font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
-    margin-right: 20px;
-    cursor: pointer; }
-    .mode-container span:first-child {
-      margin-left: 8px; }
-    .mode-container span.active {
-      color: #ff9233; }
-    .mode-container span:hover {
-      color: #ff9233; }
+    width: 100%;
+    color: #e8342f;
+    font-style: italic;
+    font-size: 14px; }
 
 .results-container {
-  width: 688px;
+  width: 687px;
   margin: 0 auto;
   border-radius: 5px;
   border: 2px solid #ff9233;
   background-color: white;
   padding: 5px;
-  margin-top: 20px;
+  margin-top: 35px;
   min-height: 100px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15); }
   .results-container .results-heading-text {
@@ -70,6 +93,11 @@
     margin-bottom: 5px; }
   .results-container .results-fibonacci {
     font-size: 16px; }
+    .results-container .results-fibonacci span {
+      opacity: 0;
+      transition: opacity .2s ease-in-out;
+      -moz-transition: opacity .2s ease-in-out;
+      -webkit-transition: opacity .2s ease-in-out; }
 
 body {
   margin: 0;
@@ -81,9 +109,8 @@ body {
   transition: opacity .5s ease-in-out;
   -moz-transition: opacity .5s ease-in-out;
   -webkit-transition: opacity .5s ease-in-out; }
-
-body.loaded {
-  opacity: 1; }
+  body.loaded {
+    opacity: 1; }
 
 .main-container {
   margin-top: 200px; }
