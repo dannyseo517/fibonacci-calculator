@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main component should render initial layout 1`] = `
+Array [
+  <div
+    className="main-container"
+  >
+    <img
+      className="heading-img"
+      height={198.7}
+      src={Object {}}
+      width={300}
+    />
+    <div
+      className="heading-text"
+    >
+      <span>
+        Fibonacci 
+      </span>
+      <span>
+        Calculator
+      </span>
+    </div>
+    <div
+      className="heading-subtext"
+    >
+      by Danny Seo
+    </div>
+    <Connect(FibonacciInput) />
+    <Connect(Results) />
+  </div>,
+]
+`;

@@ -1,5 +1,5 @@
 const getFibonacciArr = (reducer: any) => {
-    return reducer.get('fibonacciArr');
+    return reducer && reducer.get('fibonacciArr');
 };
 
 export {

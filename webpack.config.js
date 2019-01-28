@@ -56,6 +56,7 @@ module.exports = {
     resolve: {
         extensions: ['.tsx', '.ts', '.js', ".json"],
         alias: {
+            "App": path.resolve(__dirname, 'app'),
             'Assets': path.resolve(__dirname, 'public/assets'),
             'Actions': path.resolve(__dirname, 'app/actions'),
             'Common': path.resolve(__dirname, 'app/components/common'),

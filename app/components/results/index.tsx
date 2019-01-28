@@ -12,6 +12,7 @@ class Results extends Component<IProps> {
 
         this.fibResults = React.createRef();
     }
+
     renderFibonacciArr (fibonacciArr: number[]) {
         const timestamp = Date.now();
         if (fibonacciArr && fibonacciArr.length > 0) {
@@ -27,7 +28,7 @@ class Results extends Component<IProps> {
 
     componentDidUpdate () {
         const fibResultChildren = this.fibResults && this.fibResults.current.children;
-        const childrenLength = fibResultChildren && fibResultChildren.length || 0;
+        const childrenLength = fibResultChildren.length;
         let index = 0;
         if (childrenLength > 0) {
             for (let i = 0; i < childrenLength; i++ ){

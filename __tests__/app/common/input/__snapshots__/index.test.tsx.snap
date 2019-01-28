@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Common input should render initial layout 1`] = `
+Array [
+  <input
+    autoFocus={true}
+    onChange={[Function]}
+    placeholder="placeholder test"
+    value=""
+  />,
+]
+`;

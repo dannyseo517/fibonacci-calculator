@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fibonacci Input should render intial layout correctly 1`] = `
+<div
+  className="fib-input-container"
+>
+  <div
+    className="mode-container"
+  >
+    <span
+      className="active"
+      id="linear"
+      onClick={[Function]}
+    >
+      Linear
+    </span>
+    <span
+      className=""
+      id="recursion"
+      onClick={[Function]}
+    >
+      Recursion
+    </span>
+  </div>
+  <form
+    className="input-container "
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Enter any whole number (1, 2 ... up to 100)"
+      value=""
+    />
+    <button
+      onClick={[Function]}
+    >
+      =
+    </button>
+  </form>
+</div>
+`;

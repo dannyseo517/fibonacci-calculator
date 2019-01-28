@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fibonacci results should do nothing with default reducer 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "storeState": Object {
+        "fibonacciReducer": Immutable.Map {},
+      },
+    }
+  }
+>
+  <Connect(Results) />
+</ContextProvider>
+`;
+
+exports[`Fibonacci results should render fibonacci results with inclusive 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "storeState": Object {
+        "fibonacciReducer": Immutable.Map {
+          "inputValue": 10,
+          "fibonacciArr": Array [
+            0,
+            1,
+            1,
+            2,
+            3,
+            5,
+            8,
+            13,
+            21,
+            34,
+          ],
+        },
+      },
+    }
+  }
+>
+  <Connect(Results) />
+</ContextProvider>
+`;
+
+exports[`Fibonacci results should render fibonacci results with recursion 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "storeState": Object {
+        "fibonacciReducer": Immutable.Map {
+          "inputValue": 10,
+          "fibonacciArr": Array [
+            0,
+            1,
+            1,
+            2,
+            3,
+            5,
+            8,
+            13,
+            21,
+            34,
+          ],
+        },
+      },
+    }
+  }
+>
+  <Connect(Results) />
+</ContextProvider>
+`;
+
+exports[`Fibonacci results should render initial layout correctly 1`] = `
+<div
+  className="results-container"
+>
+  <div
+    className="results-heading-text"
+  >
+    Result (sum: 
+    0
+    )
+  </div>
+  <div
+    className="results-fibonacci"
+  />
+</div>
+`;

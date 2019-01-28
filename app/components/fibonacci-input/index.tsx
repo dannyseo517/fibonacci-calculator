@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Input from 'Common/input';
 import Button from 'Common/button';
 import { requestFibonacci } from 'Actions/index';
@@ -49,8 +49,8 @@ class FibonacciInput extends Component<IProps, IState> {
         return (
             <div className='fib-input-container'>
                 <div className='mode-container'>
-                    <span className={this.state.mode === 'linear' ? 'active' : ''} onClick={() => this.handleModeChange('linear')}>Linear</span>
-                    <span className={this.state.mode === 'recursion' ? 'active' : ''} onClick={() => this.handleModeChange('recursion')}>Recursion</span>
+                    <span id='linear' className={this.state.mode === 'linear' ? 'active' : ''} onClick={() => this.handleModeChange('linear')}>Linear</span>
+                    <span id='recursion' className={this.state.mode === 'recursion' ? 'active' : ''} onClick={() => this.handleModeChange('recursion')}>Recursion</span>
                 </div>
                 <form className={`input-container ${inputErrorCls}`} onSubmit={this.handleButtonClick} >
                     <Input callback={this.handleInputChange} placeholder={'Enter any whole number (1, 2 ... up to 100)'} autofocus={true} />
