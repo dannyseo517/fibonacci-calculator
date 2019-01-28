@@ -1,7 +1,7 @@
 # Fibonacci Sequence Calculator
 
 ## Getting Started
-You can view the live demo here http://www.dropwizard.io/1.0.2/docs/
+You can view the live demo here https://kaniseo.github.io/fibonacci-calculator/
 
 ### Installing
 Tested on node version 10.11.0
