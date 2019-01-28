@@ -16,6 +16,7 @@ class Input extends PureComponent<IProps, IState> {
     handleInputOnChange (event: any) {
         const { value } = event.target;
         this.setState({ value });
+        // need to call callback with the input value so the parent can have access to the input change
         this.props.callback(value);
     }
 

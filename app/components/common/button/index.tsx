@@ -14,6 +14,7 @@ class Button extends PureComponent<IProps, IState> {
     }
     
     handleButtonClick (event: any) {
+        // callback needed to let the parent know that this button has been called
         this.props.callback(event);
     }
     

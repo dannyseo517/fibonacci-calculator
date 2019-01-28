@@ -13,6 +13,7 @@ class Results extends Component<IProps> {
         this.fibResults = React.createRef();
     }
 
+    // rendering with unique key with timestamp will make sure each of the spans are re-rendered
     renderFibonacciArr (fibonacciArr: number[]) {
         const timestamp = Date.now();
         if (fibonacciArr && fibonacciArr.length > 0) {
@@ -34,6 +35,7 @@ class Results extends Component<IProps> {
             for (let i = 0; i < childrenLength; i++ ){
                 fibResultChildren[i].style.opacity = 0;
             }
+            // this will do the cascading animation for the results
             const timer = setInterval(() => {
                 const child = fibResultChildren[index];
                 if (index === childrenLength - 1 || !child) clearInterval(timer);
